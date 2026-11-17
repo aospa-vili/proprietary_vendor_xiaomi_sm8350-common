@@ -187,7 +187,6 @@ PRODUCT_PACKAGES += \
     libqmi_encdec \
     libqmi_legacy \
     libqmiservices \
-    libqti-perfd-client \
     libqti-perfd \
     libqti-util \
     libqti-utils \

@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "device/xiaomi/sm8350-common",
+        "hardware/qcom-caf/common/libqti-perfd-client",
         "hardware/qcom-caf/sm8350",
         "hardware/qcom-caf/wlan",
         "hardware/xiaomi",
@@ -2026,51 +2027,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libidl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-perfd-client",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqti-perfd-client.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "vendor.qti.hardware.perf@2.2",
-                "libhidlbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-perfd-client.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "vendor.qti.hardware.perf@2.2",
-                "libhidlbase",
                 "libc++",
                 "libc",
                 "libm",
